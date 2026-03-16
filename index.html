@@ -40,7 +40,7 @@
     animation: fadeUp 0.8s ease 0.2s forwards;
   }
   .hero-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent2); margin-bottom: 1.5rem; }
-  .hero-desc-top { max-width: 440px; color: var(--text); font-size: 1.15rem; line-height: 1.85; font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', var(--font-sans), sans-serif; font-weight: 400; letter-spacing: -0.01em; }
+  .hero-desc-top { max-width: 440px; color: var(--muted); font-size: 0.9rem; line-height: 1.85; font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', var(--font-sans), sans-serif; font-weight: 400; letter-spacing: -0.01em; word-break: keep-all; }
   .scroll-hint { margin-top: 3rem; display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--border2); }
   .scroll-hint-line { width: 32px; height: 0.5px; background: var(--border2); animation: scrollPulse 2s ease-in-out infinite; }
   @keyframes scrollPulse { 0%,100% { opacity:0.4; width:32px; } 50% { opacity:1; width:48px; } }
@@ -141,7 +141,7 @@
   .about-inner { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 5rem; align-items: start; }
   .about-heading { font-size: clamp(3.25rem,5.85vw,5.2rem); font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 2.5rem; color: var(--text); font-family: 'Cormorant Garamond','Apple SD Gothic Neo','Noto Sans KR',serif; }
   .about-heading em { font-style: italic; color: var(--warm); font-family: var(--font-display); }
-  .about-text { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', var(--font-sans), sans-serif; color: var(--muted); font-size: 1rem; line-height: 1.9; margin-bottom: 1.5rem; letter-spacing: -0.01em; word-break: keep-all; max-width: 480px; }
+  .about-text { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', var(--font-sans), sans-serif; color: var(--muted); font-size: 0.9rem; line-height: 1.9; margin-bottom: 1.5rem; letter-spacing: -0.01em; word-break: keep-all; max-width: 480px; }
   .stat-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); margin-top: 3rem; }
   .stat-item { background: var(--bg2); padding: 1.5rem 1rem; text-align: center; }
   .stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; font-style: italic; color: var(--warm); line-height: 1; margin-bottom: 0.5rem; }
@@ -174,7 +174,7 @@
   .contact { border-top: 0.5px solid var(--border2); text-align: center; background: var(--bg3); }
   .contact-big { font-family: var(--font-display); font-size: clamp(5.07rem,13.5vw,11.83rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1; margin-bottom: 1.5rem; color: var(--text); }
   .contact-big em { font-style: italic; color: var(--warm); }
-  .contact-sub { color: var(--muted); font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', var(--font-sans), sans-serif; font-size: 1rem; margin-bottom: 3rem; letter-spacing: -0.01em; }
+  .contact-sub { color: var(--muted); font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', var(--font-sans), sans-serif; font-size: 0.9rem; margin-bottom: 3rem; letter-spacing: -0.01em; word-break: keep-all; }
   .contact-link { display: inline-block; padding: 1rem 3.5rem; border: 0.5px solid var(--accent); color: var(--accent); text-decoration: none; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; transition: all 0.3s; }
   .contact-link:hover { background: var(--accent); color: var(--bg); }
 
@@ -379,7 +379,7 @@
   <div class="section-label" style="justify-content:center;max-width:180px;margin:0 auto 4rem;">07 — Contact</div>
   <h2 class="contact-big scroll-heading center-origin">Let's<br><em>work.</em></h2>
   <p class="contact-sub">프로젝트 문의, 협업 제안, 간단한 질문도 환영합니다.</p>
-  <a href="/cdn-cgi/l/email-protection#533b363f3f3c132b3a32243229367d303c3e" class="contact-link"><span class="__cf_email__" data-cfemail="0b636e6767644b73626a7c6a716e25686466">[email&#160;protected]</span> →</a>
+  <p class="contact-link" style="cursor:default; border:0.5px solid #2a2520; padding:1rem 3.5rem; display:inline-block;">xiawaze@gmail.com</p>
 </section>
 
 <footer>
@@ -388,18 +388,6 @@
 </footer>
 
 <script>
-  // 이메일 버튼
-  var btn = document.getElementById('email-btn');
-  if (btn) {
-    var u = 'xiawaze';
-    var d = 'gmail.com';
-    btn.textContent = u + '@' + d + ' →';
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.location.href = 'mai' + 'lto:' + u + '@' + d;
-    });
-  }
-
   // 스크롤 애니메이션
   function checkVisible() {
     document.querySelectorAll('.scroll-heading').forEach(function(el) {
